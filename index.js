@@ -45,15 +45,15 @@ bot.on('callback_query', (query) => {
 
 
     if (query.data === 'Spb') { // С-Пб
-        url:'http://maps.openweathermap.org/maps/2.0/weather?q=Saint-Petersburg,ru&APPID={1f89c71fe311f8fc257f5aa6e5f9f761}' //внешняя ссылка
+        url:'http://maps.openweathermap.org/maps/2.0/weather?q=Saint-Petersburg,ru&APPID=1f89c71fe311f8fc257f5aa6e5f9f761' //внешняя ссылка
     }
 
     if (query.data === 'Msc') { // Мск
-        url:'http://maps.openweathermap.org/maps/2.0/weather?q=Moscow,ru&APPID={1f89c71fe311f8fc257f5aa6e5f9f761}' //внешняя ссылка
+        url:'http://maps.openweathermap.org/maps/2.0/weather?q=Moscow,ru&APPID=1f89c71fe311f8fc257f5aa6e5f9f761' //внешняя ссылка
     }
 
     if (url) {
-        bot.sendPhoto(chatId, url, { // прикрутим клаву
+        bot.sendMessage(chatId, url, { // прикрутим клаву
             reply_markup: 
             {
                 inline_keyboard: keyboard
